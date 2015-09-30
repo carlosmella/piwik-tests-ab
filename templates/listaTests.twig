@@ -1,0 +1,36 @@
+{% import 'ajaxMacros.twig' as ajax %}
+<h2> Lista de tests </h2>
+{% if tests %}
+<table class="dataTable entityTable">
+<tr>
+	<td><strong> Nombre </strong></td> 
+	<td><strong> Fecha Inicio</strong></td> 
+	<td><strong> Fecha fin</strong></td>
+	<td><strong> Ver</strong></td>
+	<td><strong> Eliminar</strong></td>
+</tr>
+{% endif %}
+{% for test in tests %}
+	<tr>
+		<td> {{ test.nombre }} </td> 
+		<td> {{ test.fechaInicio }} </td> 
+		<td> {{ test.fechaFin }}</td>
+		<td> <a id="test" value="{{test.id}}"> <img src="plugins/Morpheus/images/ico_info.png" border="0" >Ver</a> </td>
+		<td> <a id="eliminarTest" value="{{test.id}}"> <img src="plugins/Morpheus/images/ico_delete.png" border="0" >Eliminar</a> </br> </td>
+	</tr>
+	<input type="hidden" id="fecha{{test.id}}" value="{{test.fechaInicio}},{{test.fechaFin}}">
+	<input type="hidden" id="url{{test.id}}" value="{{test.url}}" >
+	 
+	{% else %}
+	No se encontraron tests
+{% endfor%}
+</table>
+
+{{ ajax.loadingDiv('ajaxLoading') }}
+
+<div id="reportes2">
+</div>
+
+<div id="reportes">
+</div>
+

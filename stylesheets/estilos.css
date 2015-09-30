@@ -1,0 +1,24 @@
+#formNewTest {
+	width:300px;
+	float:left;
+	margin-top:15px;
+}
+#formNewTest #boton{
+	width:68px;
+}
+#formNewTest input{
+	float:right;
+	clear: right;
+	width: 200px;
+	margin-bottom: 2%;
+}
+
+#formNewTest label{
+	float:left;
+	clear: both;
+	line-height:35px;
+}
+
+.empty{
+	border: 1px solid red !important;
+}

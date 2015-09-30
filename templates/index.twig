@@ -1,0 +1,19 @@
+{% block content %} 
+<h2> Añadir Test </h2>
+<div id="contenedorTestAB" >
+	<div id="formNewTest">
+		<label> Nombre: </label>
+		<input id="nombre" type="text" placeholder="Nombre del test" class="required" /> </br>
+		<label> Fecha inicio: </label>
+		<input id="fechaInicio" type="date"  class="required"/> </br>
+		<label> Fecha fin: </label>
+		<input id="fechaFin" type="date" class="required"/> </br> 
+		<label> URL objetivo: </label>
+		<input id="url" type="text"  placeholder="Url objetivo" class="required"> </br>
+		
+		<input id="boton" type="button" class="submit" value="Enviar" />
+	</div>
+</div> 
+{#<div id="contenedor2" style="width:500px;float:left;">
+</div>#}
+{% endblock %}
